@@ -11,10 +11,9 @@ jobs:
       - run: echo "Job was triggered by event ${{ github.event_name }}"
       - uses: actions/github-script@v7
         env:
-          TYPEFORM_API_TOKEN: HELLOTOKEN
-        with:          
+          FIRST_NAME: Mona
+          LAST_NAME: Octocat
+        with:
           script: |
-            const { TYPEFORM_API_TOKEN } = process.env
-            console.log('Hello Typeform.');
-            console.log('Hello ${TYPEFORM_API_TOKEN} `)
-  
+            const { FIRST_NAME, LAST_NAME } = process.env
+            console.log(`Hello ${FIRST_NAME} ${LAST_NAME}`)
