@@ -1,6 +1,7 @@
 name: Delete responses
 run-name: ${{ github.actor }} is deleting responses
 on:
+  workflow_dispatch:
   schedule:
   - cron: "*/5 * * * *" # Every five minutes
 jobs:
