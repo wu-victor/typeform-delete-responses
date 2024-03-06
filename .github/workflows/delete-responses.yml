@@ -1,6 +1,6 @@
 name: Delete responses
 run-name: ${{ github.actor }} is deleting responses
-on: []
+on: workflow_dispatch
 jobs:
   delete-responses-job:
     runs-on: ubuntu-latest
