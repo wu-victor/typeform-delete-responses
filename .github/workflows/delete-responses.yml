@@ -15,5 +15,5 @@ jobs:
         with:          
           script: |
             console.log('Hello Typeform.');
-            console.log({ TYPEFORM_API_TOKEN })
+            console.log('Hello ${TYPEFORM_API_TOKEN} `)
   
