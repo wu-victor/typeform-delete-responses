@@ -14,6 +14,7 @@ jobs:
           TYPEFORM_API_TOKEN: HELLOTOKEN
         with:          
           script: |
+            const { TYPEFORM_API_TOKEN } = process.env
             console.log('Hello Typeform.');
             console.log('Hello ${TYPEFORM_API_TOKEN} `)
   
