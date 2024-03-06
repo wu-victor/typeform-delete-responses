@@ -11,8 +11,8 @@ jobs:
       - run: echo "Job was triggered by event ${{ github.event_name }}"
       - uses: actions/github-script@v7
         with:
-          typeform-api-token: ${{ secrets.TYPEFORM_API_TOKEN }}
+          typeform_api_token: ${{ secrets.TYPEFORM_API_TOKEN }}
           script: |
             console.log('Hello Typeform.');
-            console.log({ typeform-api-token })
+            console.log({ typeform_api_token })
   
