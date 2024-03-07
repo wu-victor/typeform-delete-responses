@@ -1,7 +1,7 @@
 # typeform-delete-responses
 
 > [!WARNING]  
-> This repo is not endorsed and not supported by Typeform the company. If you use this code, it may have unintended consequences, including deleting Typeform data that you did not want deleted, and that is **not recoverable**. Use at your own risk.
+> This repo is not endorsed and not supported by Typeform the company. If you use this code, it may have unintended consequences, including deleting Typeform data that you did not want deleted, and that is **not recoverable**. It has not been thoroughly tested. There are likely bugs and edge cases. Use at your own risk.
 
 ## Delete Typeform responses on a schedule with GitHub Actions
 This repo deletes responses in a specified Typeform using the [Typeform Responses API](https://www.typeform.com/developers/responses/). It runs inside [GitHub Actions](https://docs.github.com/en/actions), which is a  serverless environment that allows for scheduled jobs. GitHub Actions is a free offering already integrated within any GitHub repo. So you can fork/copy this repo, make changes, and run the code all within GitHub.
