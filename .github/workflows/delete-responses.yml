@@ -15,7 +15,7 @@ jobs:
           TYPEFORM_FORM_ID: "nt3rpsnq"
         with:
           script: |
-            const { TYPEFORM_API_TOKEN } = process.env
+            const { TYPEFORM_API_TOKEN, TYPEFORM_FORM_ID } = process.env
             console.log(`Hello ${TYPEFORM_API_TOKEN}`)
 
             const url = `https://api.typeform.com/forms/${TYPEFORM_FORM_ID}/responses`;
