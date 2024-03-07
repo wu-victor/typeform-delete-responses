@@ -12,7 +12,7 @@ jobs:
       - uses: actions/github-script@v7
         env:
           TYPEFORM_API_TOKEN: ${{ secrets.TYPEFORM_API_TOKEN }}
-          TYPEFORM_FORM_ID: "hwau3Ssv"
+          TYPEFORM_FORM_ID: "aUN6GIR4"
         with:
           script: |
             const { TYPEFORM_API_TOKEN, TYPEFORM_FORM_ID } = process.env
