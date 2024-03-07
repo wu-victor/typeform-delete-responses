@@ -22,7 +22,7 @@ jobs:
             const getUrl = `${responsesUrl}?page_size=1000&response_type=partial,completed`;
             const getHeaders = { 'Authorization': `Bearer ${TYPEFORM_API_TOKEN}`};            
             const getOptions = { headers: getHeaders }
-            const getRes = await fetch(getUrl, { getOptions });
+            const getRes = await fetch(getUrl, getOptions);
             const getJson = await getRes.json();
             const { items } = getJson;
 
