@@ -23,18 +23,13 @@ jobs:
             const getUrl = `${responsesUrl}?page_size=1000&response_type=partial,completed`;            
             const getOptions = { headers }
             const getRes = await fetch(getUrl, getOptions);
-
-
-            const { status } = getRes;
-            console.log({status})
             
-            const getJson = await getRes.json();
-
-            console.log({getJson})
-            
-            const { items } = getJson;
+            const { status: getStatus } = getRes;            
+            console.log({ getStatus })
 
             // Extract the response ids
+            const getJson = await getRes.json();            
+            const { items } = getJson;
             const response_ids = items.map(item => item.response_id);
 
             console.log({ response_ids })
