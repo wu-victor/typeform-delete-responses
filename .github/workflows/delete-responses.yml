@@ -3,7 +3,7 @@ run-name: ${{ github.actor }} is deleting responses
 on:
   workflow_dispatch: # Trigger job manually
   schedule:
-  - cron: "13 5 * * 0" # Trigger job weekly on at 05:13 on Sundays
+  - cron: "13 5 * * 0" # Trigger job weekly at 05:13 on Sundays
 jobs:
   delete-responses-job:
     runs-on: ubuntu-latest  
