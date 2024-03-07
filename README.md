@@ -1,6 +1,12 @@
 # typeform-delete-responses
 
-## Fork this repo
+> [!WARNING]  
+> This repo is not endorsed and not supported by Typeform the company. If you use this code, it may have unintended consequences, including deleting data that is **not recoverable**. Use at your own risk.
+
+## Delete Typeform responses on a schedule with GitHub Actions
+This repo deletes responses in a specified Typeform using the [Typeform Responses API](https://www.typeform.com/developers/responses/). It runs inside [GitHub Actions](https://docs.github.com/en/actions), which is a  serverless environment that allows for scheduled jobs. GitHub Actions is already integrated within GitHub Repos. So you can fork/copy this repo, make changes, and run the code all within GitHub.
+
+## Fork/copy this repo
 [Fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks) or copy this repo.
 
 ## Set up your Typeform API token
@@ -12,7 +18,7 @@ In your new repo, add an [Actions secret](https://docs.github.com/en/actions/sec
 In `delete-responses.yml`, replace the string value indicated by `TYPEFORM_FORM_ID` with the form id that you care about.
 
 ## Customize your workflow schedule
-In `delete-responses.yml`, replace the cron schedule value to whenever you want your workflow to run. [crontab guru](https://crontab.guru/) is a helpful tool. The GitHub Actions [schedule](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule) is not very reliable. So consider scheduling your job in frequently and at at weird hours and minutes to avoid high traffic load.
+In `delete-responses.yml`, replace the cron schedule value to whenever you want your workflow to run. [crontab guru](https://crontab.guru/) is a helpful tool. The GitHub Actions [schedule](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule) is not very reliable. So consider scheduling your job infrequently and at at weird hours and minutes to avoid high traffic load.
 
 ## Run the workflow manually
 [Trigger the workflow manually](https://docs.github.com/en/actions/using-workflows/manually-running-a-workflow) by clicking `Run workflow`. You can do this immediately after making any changes to your repo to see the results.
