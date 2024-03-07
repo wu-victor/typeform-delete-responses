@@ -17,13 +17,19 @@ jobs:
           script: |
             const { TYPEFORM_API_TOKEN, TYPEFORM_FORM_ID } = process.env
             const responsesUrl = `https://api.typeform.com/forms/${TYPEFORM_FORM_ID}/responses`
+            const headers = { 'Authorization': `Bearer ${TYPEFORM_API_TOKEN}`};            
 
             // Get up to 1000 completed or partial responses
-            const getUrl = `${responsesUrl}?page_size=1000&response_type=partial,completed`;
-            const getHeaders = { 'Authorization': `Bearer ${TYPEFORM_API_TOKEN}`};            
-            const getOptions = { headers: getHeaders }
+            const getUrl = `${responsesUrl}?page_size=1000&response_type=partial,completed`;            
+            const getOptions = { headers }
             const getRes = await fetch(getUrl, getOptions);
+
+            console.log({getRes})
+            
             const getJson = await getRes.json();
+
+            console.log({getJson})
+            
             const { items } = getJson;
 
             // Extract the response ids
@@ -32,7 +38,9 @@ jobs:
             console.log({ response_ids })
 
             // Delete responses
-            const deleteUrl = responsesUrl;
+            
+            
+            
             
 
             
