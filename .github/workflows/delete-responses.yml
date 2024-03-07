@@ -23,6 +23,9 @@ jobs:
             const res = await fetch(url, { headers });
             const jsonRes = await res.json();
             const { items } = jsonRes;
-            console.log({ items });
+
+            // Extract the response ids
+            const response_ids = items.map(item => item.response_id);
+            console.log({ response_ids })
 
             
