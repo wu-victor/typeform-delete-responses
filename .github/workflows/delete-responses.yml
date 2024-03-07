@@ -24,7 +24,9 @@ jobs:
             const getOptions = { headers }
             const getRes = await fetch(getUrl, getOptions);
 
-            console.log({getRes})
+
+            const { status } = getRes;
+            console.log({status})
             
             const getJson = await getRes.json();
 
