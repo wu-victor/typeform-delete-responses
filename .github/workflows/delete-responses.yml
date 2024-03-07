@@ -44,8 +44,8 @@ jobs:
               body: JSON.stringify(bodyData)
             };
             const deleteRes = await fetch(deleteUrl, deleteOptions);
-            const { status: deleteRes } = deleteRes;            
-            console.log({ deleteRes })
+            const { status: deleteStatus } = deleteRes;            
+            console.log({ deleteStatus })
             
             
             
