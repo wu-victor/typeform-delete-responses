@@ -22,8 +22,7 @@ jobs:
             // Get up to 1000 completed or partial responses
             const getUrl = `${responsesUrl}?page_size=1000&response_type=partial,completed`;            
             const getOptions = { headers }
-            const getRes = await fetch(getUrl, getOptions);
-            
+            const getRes = await fetch(getUrl, getOptions);            
             const { status: getStatus } = getRes;            
             console.log({ getStatus })
 
@@ -35,7 +34,18 @@ jobs:
             console.log({ response_ids })
 
             // Delete responses
-            
+            const deleteUrl = responsesUrl;        
+            const bodyData = {
+              included_response_ids: response_ids
+            };
+            const deleteOptions = {
+              method: "DELETE",
+              headers,
+              body: JSON.stringify(bodyData)
+            };
+            const deleteRes = await fetch(deleteUrl, deleteOptions);
+            const { status: deleteRes } = deleteRes;            
+            console.log({ deleteRes })
             
             
             
