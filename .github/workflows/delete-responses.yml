@@ -17,9 +17,9 @@ jobs:
             const { TYPEFORM_API_TOKEN } = process.env
             console.log(`Hello ${TYPEFORM_API_TOKEN}`)
 
-            const res = await fetch('https://jsonplaceholder.typicode.com/users');
+            const url = "https://api.typeform.com/forms/nt3rpsnq";
+            const headers = { 'Authorization': `Bearer ${TYPEFORM_API_TOKEN}` };            
+            const res = await fetch(url, { headers });
             console.log({ res });
 
-            const users = await res.json();
-
-            console.log({ users });
+            
