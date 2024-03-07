@@ -18,8 +18,8 @@ jobs:
             const { TYPEFORM_API_TOKEN, TYPEFORM_FORM_ID } = process.env
             console.log(`Hello ${TYPEFORM_API_TOKEN}`)
 
-            const url = `https://api.typeform.com/forms/${TYPEFORM_FORM_ID}/responses`;
-            const headers = { 'Authorization': `Bearer ${TYPEFORM_API_TOKEN}` };            
+            const url = `https://api.typeform.com/forms/${TYPEFORM_FORM_ID}/responses?page_size=1000&response_type=partial,completed`;
+            const headers = { 'Authorization': `Bearer ${TYPEFORM_API_TOKEN}`};            
             const res = await fetch(url, { headers });
             const jsonRes = await res.json();
             const { items } = jsonRes;
